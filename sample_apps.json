@@ -1,0 +1,6 @@
+{
+  "PythonGitignore": "https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore",
+  "GitHubLicense": "https://raw.githubusercontent.com/github/gitignore/main/LICENSE",
+  "NonExistentAppForCliTest": "http://example.com/non_existent_file_for_cli.zip",
+  "KernelCopying": "https://raw.githubusercontent.com/torvalds/linux/master/COPYING"
+}
