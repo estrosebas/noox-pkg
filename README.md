@@ -41,6 +41,7 @@ La interfaz gráfica te permite:
 *   **Selector de Esquema de Color**: Utiliza el menú desplegable (ComboBox) ubicado encima de la barra de estado para cambiar la paleta de colores de la interfaz (ej. "Neon Verde", "Neon Azul"). La estructura oscura general se mantiene, pero los colores de acento y resaltado cambiarán.
 *   **Barra de Progreso de Descarga**: Durante las descargas activas, una barra de progreso aparecerá encima de la barra de estado, mostrando el avance del archivo actual.
 
+
 ## Uso (CLI)
 
 Consulta la ayuda para los comandos:

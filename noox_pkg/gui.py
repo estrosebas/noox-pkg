@@ -6,6 +6,7 @@ import threading
 
 # Assuming utils is in the same package directory
 from .utils import json_parser, downloader
+
 # Fallback for DOWNLOAD_DIR if cli module is not found
 try:
     from .cli import DOWNLOAD_DIR as CLI_DOWNLOAD_DIR
@@ -223,6 +224,7 @@ class AppGUI:
         for i in self.app_tree.get_children(): self.app_tree.delete(i)
         for app_name, url in self.loaded_apps.items(): self.app_tree.insert("", tk.END, values=(app_name, url))
 
+
     def set_download_dir(self):
         new_dir = filedialog.askdirectory(mustexist=False, title="Select Download Directory", initialdir=self.current_download_dir)
         if new_dir:
@@ -243,3 +245,4 @@ def start_gui():
     root = tk.Tk(); app = AppGUI(root); root.mainloop()
 
 if __name__ == '__main__': start_gui()
+
