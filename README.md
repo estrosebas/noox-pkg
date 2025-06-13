@@ -11,7 +11,7 @@ Esta es una breve descripción del proyecto en español.
 
 1.  Clona el repositorio:
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone https://github.com/estrosebas/noox-pkg
     cd nombre-del-directorio-clonado
     ```
 2.  Crea un entorno virtual:
