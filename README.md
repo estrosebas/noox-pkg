@@ -24,14 +24,23 @@ Esta es una breve descripción del proyecto en español.
     pip install -r noox_pkg/requirements.txt
     ```
 
-## Uso (GUI)
+## Uso (Interfaz Gráfica - GUI)
 
 Ejecuta la GUI con:
 ```bash
 python -m noox_pkg.main gui
-# o simplemente
+# o simplemente (si no se especifica ningún comando)
 python -m noox_pkg.main
 ```
+
+La interfaz gráfica te permite:
+*   **Importar JSON**: Carga una lista de aplicaciones desde un archivo JSON.
+*   **Descargar Seleccionado**: Descarga la aplicación que hayas seleccionado en la lista.
+*   **Descargar Todo**: Descarga todas las aplicaciones de la lista.
+*   **Establecer Directorio de Descarga**: Elige dónde se guardarán los archivos descargados.
+*   **Selector de Esquema de Color**: Utiliza el menú desplegable (ComboBox) ubicado encima de la barra de estado para cambiar la paleta de colores de la interfaz (ej. "Neon Verde", "Neon Azul"). La estructura oscura general se mantiene, pero los colores de acento y resaltado cambiarán.
+*   **Barra de Progreso de Descarga**: Durante las descargas activas, una barra de progreso aparecerá encima de la barra de estado, mostrando el avance del archivo actual.
+
 
 ## Uso (CLI)
 
