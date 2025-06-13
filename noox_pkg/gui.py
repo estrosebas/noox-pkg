@@ -1,3 +1,4 @@
+
 import tkinter as tk # Ensure tk is imported directly
 from tkinter import ttk, filedialog, messagebox
 # from ttkthemes import ThemedTk # Comment out for now
@@ -5,6 +6,7 @@ import os
 
 # Assuming utils is in the same package directory
 from .utils import json_parser, downloader
+
 # Fallback for DOWNLOAD_DIR if cli module is not found
 try:
     from .cli import DOWNLOAD_DIR as CLI_DOWNLOAD_DIR
@@ -77,6 +79,7 @@ class AppGUI:
         self.loaded_apps = {}
 
         main_frame = ttk.Frame(self.root, padding="10", style='Main.TFrame')
+
         main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
@@ -88,12 +91,14 @@ class AppGUI:
 
         self.app_tree = ttk.Treeview(app_list_frame, columns=("App Name", "URL"), show="headings", style='Custom.Treeview')
         self.app_tree.heading("App Name", text="App Name") # Headings styled by Custom.Treeview.Heading
+
         self.app_tree.heading("URL", text="URL")
         self.app_tree.column("App Name", width=200, stretch=tk.YES)
         self.app_tree.column("URL", width=400, stretch=tk.YES)
 
         tree_scrollbar_y = ttk.Scrollbar(app_list_frame, orient="vertical", command=self.app_tree.yview, style='Custom.Vertical.TScrollbar')
         tree_scrollbar_x = ttk.Scrollbar(app_list_frame, orient="horizontal", command=self.app_tree.xview, style='Custom.Horizontal.TScrollbar')
+
         self.app_tree.configure(yscrollcommand=tree_scrollbar_y.set, xscrollcommand=tree_scrollbar_x.set)
 
         self.app_tree.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
